@@ -1,0 +1,57 @@
+package oct07_TestNG;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.*;
+
+public class DataDrivenWithDataProviderAnnotation {
+	
+	WebDriver driver;
+	@BeforeMethod
+	public void setup() 
+	{
+		
+	}
+	
+	
+	
+	
+	@Test(dataProvider = "items")
+	public void searchProd(String prod) 
+	{
+		WebElement searchBox = driver.findElement(By.id(""));
+		searchBox.sendKeys(prod);
+	}
+	
+	
+	
+	
+	
+	@DataProvider(name = "items")
+	public Object[] dataDriven() 
+	{
+		Object[][] data = new Object[2][1];
+		data[0][0] = "";
+		data[1][0] = "";
+		
+		return data;
+	}
+	
+	
+	
+	
+	
+	
+	
+	@AfterMethod
+	public void tearDown() 
+	{
+		driver.close();
+	}
+	
+	
+	
+	
+
+}
