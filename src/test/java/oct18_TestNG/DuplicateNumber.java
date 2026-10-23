@@ -1,0 +1,47 @@
+package oct18_TestNG;
+
+public class DuplicateNumber {
+	
+	
+	public static void main(String[] args) {
+		
+		int[] array = {4, 5, 6, 7, 4, 5, 8};
+		
+		System.out.println("Duplicate element :");
+		
+		for(int i=0; i<array.length; i++) 
+		{
+			for(int j=i+1; j<array.length; j++) 
+			{
+				if(array[i] == array[j]) 
+				{
+					System.out.println(array[i]);
+				}
+			}
+		}
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
